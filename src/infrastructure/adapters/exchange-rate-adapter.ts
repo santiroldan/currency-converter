@@ -1,7 +1,7 @@
-import type { Currency } from "../domain/currency";
-import type { ExchangeRateRepository } from "../domain/exchange-rate-repository";
+import type { Currency } from "../../domain/currency";
+import type { ExchangeRateRepository } from "../../domain/exchange-rate-repository";
 
-export class ApiExchangeRateRepository implements ExchangeRateRepository {
+export class ExchangeRateAdapter implements ExchangeRateRepository {
 	public async getRate(from: Currency, to: Currency): Promise<number> {
 		const url = `https://api.frankfurter.app/latest?from=${from.value}&to=${to.value}`;
 		const response = await fetch(url);

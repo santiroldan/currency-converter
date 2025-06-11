@@ -1,8 +1,8 @@
 import type { NextFunction, Request, Response } from "express";
-import type { CurrencyConverter } from "../application/currency-converter";
+import type { CurrencyConverter } from "../../application/currency-converter";
 
-export class CurrencyController {
-	constructor(private convertCurrency: CurrencyConverter) {}
+export class ExchangeRateController {
+	constructor(private currencyConverter: CurrencyConverter) {}
 
 	public async convert(req: Request, res: Response, _next: NextFunction) {
 		const { from, to, amount } = req.query;
@@ -15,7 +15,7 @@ export class CurrencyController {
 
 		try {
 			res.json(
-				await this.convertCurrency.run({
+				await this.currencyConverter.run({
 					from: String(from),
 					to: String(to),
 					amount: Number(amount),
