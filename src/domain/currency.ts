@@ -2,12 +2,17 @@ export class Currency {
 	private constructor(private readonly code: string) {}
 
 	public static create(code: string): Currency {
-		const upper = code.toUpperCase();
-		if (!/^[A-Z]{3}$/.test(upper)) {
+		const currencyCode = code.toUpperCase();
+
+		if (!/^[A-Z]{3}$/.test(currencyCode)) {
 			throw new Error(`Invalid currency code: ${code}`);
 		}
 
-		return new Currency(upper);
+		if (currencyCode.length !== 3) {
+			throw new Error(`Currency code must be 3 characters long: ${code}`);
+		}
+
+		return new Currency(currencyCode);
 	}
 
 	public get value(): string {
