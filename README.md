@@ -22,7 +22,7 @@ Explorar el concepto de arquitectura hexagonal mediante un conversor de monedas.
 - Arquitectura hexagonal (puertos y adaptadores).
 - Express para exponer el servicio mediante una API REST.
 - API externa (https://api.frankfurter.app) como proveedor de tasas de cambio.
-- Soporte para pruebas unitarias y de integración con [Vitest](https://vitest.dev) y [Supertest](https://github.com/visionmedia/supertest).
+- Soporte para pruebas unitarias y e2e con [Vitest](https://vitest.dev) y [Supertest](https://github.com/visionmedia/supertest).
 
 ---
 
@@ -34,10 +34,11 @@ currency-converter/
 │   ├── application/
 │   ├── domain/
 │   ├── infrastructure/
-│   └── presentation/
+│       ├── adapters/
+│       ├── http/
 ├── test/
     ├── application/   # Tests unitarios
-    └── presentation/  # Tests end-to-end (e2e)
+    └── infrastructure/http/   # Tests de end-to-end (e2e)
 ```
 
 ---
