@@ -14,12 +14,13 @@ export class CurrencyController {
 		}
 
 		try {
-			const result = await this.convertCurrency.run({
-				from: String(from),
-				to: String(to),
-				amount: Number(amount),
-			});
-			res.json({ result });
+			res.json(
+				await this.convertCurrency.run({
+					from: String(from),
+					to: String(to),
+					amount: Number(amount),
+				}),
+			);
 		} catch (error) {
 			let message = String(error);
 
