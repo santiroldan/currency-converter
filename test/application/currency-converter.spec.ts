@@ -13,7 +13,7 @@ describe("CurrencyConverter", () => {
 		const result = await useCase.run({ amount: 100, from: "USD", to: "EUR" });
 
 		expect(result.amount).toBe(85);
-		expect(result.currency.value).toBe("EUR");
+		expect(result.rate).toBe(0.85);
 		expect(mockRepo.getRate).toHaveBeenCalledWith(
 			expect.any(Currency),
 			expect.any(Currency),
