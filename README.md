@@ -1,19 +1,68 @@
-# 🎯 Ejemplo de Proyecto
+# 🎯 Conversor de divisas 
 
-Descripción breve del proyecto y su propósito.
+Este proyecto demuestra el concepto de arquitectura hexagonal mediante un conversor de divisas. 
+Utiliza Express para exponer un servicio a través de una API REST y se conecta a una API externa para obtener tasas de cambio actualizadas.
 
 ---
 
 ## 📋 Tabla de Contenidos
 
-- [Ejemplo](#-ejemplo)
+- [Objetivo del Proyecto](#-objetivo-del-proyecto)
+- [Estructura del Proyecto](#-estructura-del-proyecto)
+- [Instalación](#-instalación)
+- [Ejecutar el Proyecto](#-ejecutar-el-proyecto)
+- [Ejecutar los Tests](#-ejecutar-los-tests)
 - [Licencia](#-licencia)
 
 ---
 
-## 📌 Ejemplo
+## 📌 Objetivo del Proyecto
+Explorar el concepto de arquitectura hexagonal mediante un conversor de divisas.
 
-Ejemplo de sección
+- Arquitectura hexagonal (puertos y adaptadores).
+- Express para exponer el servicio mediante una API REST.
+- API externa (https://api.frankfurter.app) como proveedor de tasas de cambio.
+- Soporte para pruebas unitarias y de integración con [Vitest](https://vitest.dev) y [Supertest](https://github.com/visionmedia/supertest).
+
+---
+
+## 📦 Estructura del Proyecto
+
+```text
+currency-converter/
+├── src/
+│   ├── application/
+│   ├── domain/
+│   ├── infrastructure/
+│   └── presentation/
+├── test/
+    ├── application/   # Tests unitarios
+    └── presentation/  # Tests end-to-end (e2e)
+```
+
+---
+
+## 🚀 Instalación
+
+```bash
+pnpm install
+```
+
+---
+
+## 🚀 Ejecutar el Proyecto
+
+```bash
+npm run start
+```
+
+---
+
+## 🧪 Ejecutar los Tests
+
+```bash
+pnpm test
+```
 
 ---
 
