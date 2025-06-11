@@ -54,7 +54,7 @@ pnpm install
 ## 🚀 Ejecutar el Proyecto
 
 ```bash
-npm run start
+pnpm start
 ```
 
 ---
