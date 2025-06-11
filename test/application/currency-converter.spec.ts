@@ -28,11 +28,27 @@ describe("CurrencyConverter", () => {
 		).rejects.toThrow("Invalid currency code: INVALID");
 	});
 
+	it("should throw an error if the currency code length is invalid", async () => {
+		const useCase = new CurrencyConverter(mockRepo);
+
+		await expect(
+			useCase.run({ amount: 100, from: "US", to: "EUR" }),
+		).rejects.toThrow("Invalid currency code: US");
+	});
+
 	it("should throw an error if the amount is negative", async () => {
 		const useCase = new CurrencyConverter(mockRepo);
 
 		await expect(
 			useCase.run({ amount: -100, from: "USD", to: "EUR" }),
 		).rejects.toThrow("Amount must be non-negative");
+	});
+
+	it("should throw an error if the amount is NaN", async () => {
+		const useCase = new CurrencyConverter(mockRepo);
+
+		await expect(
+			useCase.run({ amount: Number.NaN, from: "USD", to: "EUR" }),
+		).rejects.toThrow("Amount must be a valid number");
 	});
 });
