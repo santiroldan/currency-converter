@@ -1,6 +1,6 @@
-# 🎯 Conversor de divisas 
+# 🎯 Conversor de monedas 
 
-Este proyecto demuestra el concepto de arquitectura hexagonal mediante un conversor de divisas. 
+Este proyecto demuestra el concepto de arquitectura hexagonal mediante un conversor de monedas. 
 Utiliza Express para exponer un servicio a través de una API REST y se conecta a una API externa para obtener tasas de cambio actualizadas.
 
 ---
@@ -17,7 +17,7 @@ Utiliza Express para exponer un servicio a través de una API REST y se conecta 
 ---
 
 ## 📌 Objetivo del Proyecto
-Explorar el concepto de arquitectura hexagonal mediante un conversor de divisas.
+Explorar el concepto de arquitectura hexagonal mediante un conversor de monedas.
 
 - Arquitectura hexagonal (puertos y adaptadores).
 - Express para exponer el servicio mediante una API REST.
