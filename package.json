@@ -1,26 +1,32 @@
 {
-  "name": "template",
-  "version": "1.0.0",
-  "description": "Template description",
-  "private": true,
-  "author": "Santiago Roldán",
-  "license": "MIT",
-  "scripts": {
-    "prepare": "husky install",
-    "test": "vitest run"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.1.0",
-    "typescript": "^5.4.5",
-    "vitest": "^2.0.5"
-  },
-  "lint-staged": {
-    "*.{ts,json}": [
-      "biome check --apply"
-    ]
-  }
+	"name": "template",
+	"version": "1.0.0",
+	"description": "Template description",
+	"private": true,
+	"author": "Santiago Roldán",
+	"license": "MIT",
+	"scripts": {
+		"dev": "ts-node-dev --respawn --transpile-only src/main.ts",
+		"prepare": "husky install",
+		"start": "ts-node src/main.ts",
+		"test": "vitest run"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@commitlint/cli": "^19.8.1",
+		"@commitlint/config-conventional": "^19.8.1",
+		"@types/express": "^5.0.3",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.1.0",
+		"ts-node": "^10.9.2",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^5.4.5",
+		"vitest": "^2.0.5"
+	},
+	"lint-staged": {
+		"*.{ts,json}": ["biome check --apply"]
+	},
+	"dependencies": {
+		"express": "^5.1.0"
+	}
 }
