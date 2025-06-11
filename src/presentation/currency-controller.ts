@@ -4,7 +4,7 @@ import type { CurrencyConverter } from "../application/currency-converter";
 export class CurrencyController {
 	constructor(private convertCurrency: CurrencyConverter) {}
 
-	public async convert(req: Request, res: Response, next: NextFunction) {
+	public async convert(req: Request, res: Response, _next: NextFunction) {
 		const { from, to, amount } = req.query;
 
 		if (!from || !to || !amount) {
