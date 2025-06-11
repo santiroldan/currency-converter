@@ -1,7 +1,7 @@
 {
-	"name": "template",
+	"name": "currency-converter",
 	"version": "1.0.0",
-	"description": "Template description",
+	"description": "Demo básica de arquitectura hexagonal (conversor de monedas)",
 	"private": true,
 	"author": "Santiago Roldán",
 	"license": "MIT",
