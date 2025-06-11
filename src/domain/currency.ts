@@ -13,8 +13,4 @@ export class Currency {
 	public get value(): string {
 		return this.code;
 	}
-
-	public equals(other: Currency): boolean {
-		return this.code === other.code;
-	}
 }
