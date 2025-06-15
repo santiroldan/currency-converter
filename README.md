@@ -43,7 +43,7 @@ currency-converter/
 
 ---
 
-## 🚀 Instalación
+## 💾 Instalación
 
 ```bash
 pnpm install
